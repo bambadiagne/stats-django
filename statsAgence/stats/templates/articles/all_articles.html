@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.11.2/css/dataTables.bootstrap4.min.css">
+<table id="example" class="table table-striped table-bordered" >
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Image</th>
+            <th>Prix</th>
+            <th>Quantité</th>
+            <th>Categorie</th>
+            <th>Description</th>
+            <th>Date création</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for article in all_articles %}
+        <tr>
+        <td>{{article.nom}}</td>
+        <td>{{article.image}}</td>
+        <td>{{article.price}}</td>
+        <td>{{article.quantite}}</td>
+        <td>{{article.type_categorie}}</td>
+        <td>{{article.description}}</td>
+        <td>{{article.date_creation}}</td>
+    </tr>
+        {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>Nom</th>
+            <th>Image</th>
+            <th>Prix</th>
+            <th>Quantité</th>
+            <th>Categorie</th>
+            <th>Description</th>
+            <th>Date création</th>
+        </tr>
+    </tfoot>
+</table>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.11.2/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.2/js/dataTables.bootstrap4.min.js"></script>
+<script>
+    $(document).ready(function() {
+    $('#example').DataTable();
+} );
+</script>
