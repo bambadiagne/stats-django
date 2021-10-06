@@ -1,0 +1,6 @@
+<form enctype="multipart/form-data" action="" method="post">
+    {% csrf_token %}
+<input type="file" class="btn" name="articles" id="articles">
+<button type="button" id='submit-form' onclick="showspinner('{{model_name}}')" class="btn btn-success">Importer</button>
+
+</form>

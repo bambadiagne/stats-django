@@ -1,0 +1,4 @@
+id,Numero de transfert,PIN,Mode de livraison,Caissier,Agence,Code Agence,Agence Réconciliation,Code A. réconciliation,Montant Envoye,Devise d'Envoi,Pays d'Envoi,Pays de destination,Montant à Payer,Devise de paiement,Montant de la commission SA,Devise de la commission SA,Date,Taux,TOB,TTHU,Frais,Action
+1,SN1072310416,12737447423,RG,chdiop,Cheikh Lamp Diop Ancienne Gare,CLD002,Cheikh Lamp Diop Ancienne Gare,CLD002,-322675,XOF,Senegal,Morocco,5020.68,MAD,0,XOF,9/24/2021 19:24,64.2692,3689,1936,21700,Envoi
+2,SN1072246716,12755793975,RG,chdiop,Cheikh Lamp Diop Ancienne Gare,CLD002,Cheikh Lamp Diop Ancienne Gare,CLD002,-322675,XOF,Senegal,Morocco,5020.68,MAD,0,XOF,9/24/2021 19:15,64.2692,3689,1936,21700,Envoi
+3,SN1070602716,12740667734,RG,chdiop,Cheikh Lamp Diop Ancienne Gare,CLD002,Cheikh Lamp Diop Ancienne Gare,CLD002,-285090,XOF,Senegal,France,434.62,EUR,0,XOF,9/24/2021 15:49,655.957,1918,1711,11282,Envoi

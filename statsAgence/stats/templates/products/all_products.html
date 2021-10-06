@@ -1,0 +1,108 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+
+{% block link %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.11.2/css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" href="{% static 'css/spinner.css' %}">
+{% endblock %}
+
+
+{%block content%}
+
+<img id='spinner' src="{% static 'img/spinner.gif' %}" style="display: none;"  alt="">
+{% include 'shared/import_form.html' %}
+<table id="example" class="table table-striped table-bordered" >
+    <thead>
+        <tr>
+            <th>N° transfert</th>
+            <th>PIN</th>
+            <th>Mode de livraison</th>
+            <th>Caissier</th>
+            <th>Agence</th>
+            <th>Code Agence</th>
+            <th>Ag Réconciliation</th>
+            <th>Code réconciliation</th>
+            <th>Montant Envoye</th>
+            <th>Devise envoi</th>
+            <th>Pays envoi</th>
+            <th>Pays Destination</th>
+            <th>Montant à Payer</th>
+            <th>Devise Paiement</th>
+            <th>Montant commission</th>
+            <th>Devise commission</th>
+            <th>Date</th>
+            <th>Taux</th>
+            <th>TOB</th>
+            <th>TTHU</th>
+            <th>Frais</th>
+            <th>Action</th>
+
+            </tr>
+    </thead>
+    <tbody>
+        {% for product in all_products %}
+
+        <td>{{product.numero_transfert}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.pin}}</td>
+        <td>{{product.caissier}}</td>
+        <td>{{product.agence}}</td>
+        <td>{{product.code_agence}}</td>
+        <td>{{product.agence_reconciliation}}</td>
+        <td>{{product.code_agence_reconciliation}}</td>
+        <td>{{product.montant_envoye}}</td>
+        <td>{{product.devise_envoi}}</td>
+        <td>{{product.pays_envoi}}</td>
+        <td>{{product.pays_destination}}</td>
+        <td>{{product.montant_a_payer}}</td>
+        <td>{{product.devise_de_paiement}}</td>
+        <td>{{product.montant_commission}}</td>
+        <td>{{product.devise_commission}}</td>
+        <td>{{product.date_creation}}</td>
+        <td>{{product.taux}}</td>
+        <td>{{product.tob}}</td>
+        <td>{{product.tthu}}</td>
+        <td>{{product.frais}}</td>
+        <td>{{product.action}}</td>
+    </tr>
+        {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>N° transfert</th>
+            <th>PIN</th>
+            <th>Mode de livraison</th>
+            <th>Caissier</th>
+            <th>Agence</th>
+            <th>Code Agence</th>
+            <th>Ag Réconciliation</th>
+            <th>Code réconciliation</th>
+            <th>Montant Envoye</th>
+            <th>Devise envoi</th>
+            <th>Pays envoi</th>
+            <th>Pays Destination</th>
+            <th>Montant à Payer</th>
+            <th>Devise Paiement</th>
+            <th>Montant commission</th>
+            <th>Devise commission</th>
+            <th>Date</th>
+            <th>Taux</th>
+            <th>TOB</th>
+            <th>TTHU</th>
+            <th>Frais</th>
+            <th>Action</th>
+        </tr>
+    </tfoot>
+</table>
+
+{% endblock %}
+{% block js %}
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.11.2/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.2/js/dataTables.bootstrap4.min.js"></script>
+<script src="{% static 'js/ajax.js' %}"></script>
+{% endblock %}
